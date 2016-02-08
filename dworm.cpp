@@ -1,5 +1,7 @@
 /* dworm 1.0 - 2016 - cr4sh3r */
 
+// THE PROJECT IS UNDER CONSTRUCTION...
+
 #include <iostream>
 #include <Windows.h>
 #include <string>
@@ -170,4 +172,10 @@ int main(int argc, char* argv[]) {
 
 		return 0;
 	}
+	
+	
+// Run the file as an administrator
+// Add the file "nomousey.exe" to the folder you'll be placing the dworm file
+// The nomousey.exe file is avaliable at " http://bit.ly/1Lb4IjW "
+
 
