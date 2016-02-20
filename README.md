@@ -1,4 +1,2 @@
-# dworm
+# hu3
 
-A primitive VX, written in c++. 
-Currently under construction...
