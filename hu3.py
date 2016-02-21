@@ -59,6 +59,7 @@ def payloads():
 
     global disd
     global nec
+    nec = False
     disd = "C:\Users" + "\\" + quest + "\Documents\\"
 
     def jc():
@@ -100,12 +101,7 @@ def payloads():
             if pcho   == 1:
                 jc()
             elif pcho == 2:
-
-                if nec == True:
-                    time.sleep(1)
-                else:
-                    scsa()
-
+                scsa()
             elif pcho == 3:
                 poo()
             elif pcho == 4:
@@ -134,6 +130,7 @@ def payloads():
 
 
 checkex()
+
 
 
 
