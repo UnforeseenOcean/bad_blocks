@@ -1,6 +1,4 @@
-/* hu3-aux - 2016 - cr4sh3r */
-
-/* hu3-aux - 2016 - cr4sh3r */
+/* bad_blocks - 2016 - cr4sh3r */
 
 #include <iostream> 
 #include <Windows.h>
