@@ -31,3 +31,5 @@ void payload() {
 		}
 	}
 }
+
+// bad_blocks(usb-worm) - pack
