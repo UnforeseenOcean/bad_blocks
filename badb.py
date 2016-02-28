@@ -164,9 +164,20 @@ def checkex():
     if cd == startxa:
         ft = False
         wpp()
-        while(1==1):
-            random.choice([block(), poo(), sc()])
-
+        while 1==1:
+            try:
+                pcho = random.choice([1,2,3])
+                if pcho   == 1:
+                    us()
+                    block()
+                elif pcho == 2:
+                    us()
+                    poo()
+                elif pcho == 3:
+                    us()
+                    sc()
+            except:
+                pass
     else:
         ft = True
         startupcom = "copy " + filen + " " + start
