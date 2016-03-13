@@ -244,7 +244,7 @@ def checkex():
                     block()
                 elif pcho == 2:
                     for d24 in range(95):
-                        if d24 % 20 == 0:
+                        if d24 % 7 == 0:
                             us()
                         else:
                             poo()
