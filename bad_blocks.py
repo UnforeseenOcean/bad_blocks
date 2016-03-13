@@ -246,13 +246,15 @@ def checkex():
                     for d24 in range(95):
                         if d24 % 20 == 0:
                             us()
-                        poo()
+                        else:
+                            poo()
                     time.sleep(60*7)
                 elif pcho == 3:
                     for d34 in range(2):
                         if d34 % 2 == 0:
                             us()
-                        sc()
+                        else:
+                            sc()
                     time.sleep(60*7)
                 elif pcho == 4:
                     os.system("start C:\\Users\\%username%\\Documents\\sound.vbs")
