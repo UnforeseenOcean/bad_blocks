@@ -1,3 +1,3 @@
-# bad_blocks
+# bad_blocks - v2.0
 
 A vx...
